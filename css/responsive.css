@@ -1,0 +1,31 @@
+@media screen and (max-width: 540px) {
+  h1 {
+    font-size: 40px;
+  }
+  #instruction{
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 430px) {
+  h1 {
+    font-size: 30px;
+  }
+  #instruction{
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 350px) {
+  #container {
+    width:280px;
+  	min-height:400px;
+  }
+}
+@media screen and (max-width: 320px) {
+  #container {
+    width:280px;
+  	min-height:400px;
+  }
+  h1 {
+    font-size: 25px;
+  }
+}

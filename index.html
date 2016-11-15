@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web Audio Player</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css" media="screen">
+    <link rel="stylesheet" href="css/responsive.css" media="screen">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/headphones.png" />
+</head>
+<header>
+  <h1>Let's get some music!</h1>
+</header>
+<body>
+
+
+  <div id="uploader" style="text-align: center">
+    <div id="instruction">
+      <p>Upload all audio files you'd like to listen to.</p>
+    </div>
+    <div id="input">
+      <input type="file" id="audio-upload" onchange="makeFileList()" multiple="" />
+      <!--audio id="sound" controls></audio-->
+    </div>
+  </div>
+
+  <div id="container">
+    <div id="audio-image">
+		  <img class="cover" src="images/cd_music_w.png"></img>
+	  </div>
+  	<div id="audio-player">
+      <div id="audio-info">
+  			<!--span class="artist"></span> - <span class="title"></span-->
+        <span class="title"></span>
+  		</div>
+      <div id="volume-panel">
+        <div id="volume-mute"><img id="volume-mute" src="images/volume_mute.png" alt="volume_mute" ></img></div>
+        <input id="volume" type="range" min="0" max="10" value="5" />
+        <div id="volume-on"><img id="volume-on" src="images/volume_on.png" alt="volume_on" ></img></div>
+      </div>
+      <br>
+       <div id="buttons">
+
+    			<span class="prevbtn"><button id="prev"></button></span>
+    			<span class="playbtn"><button id="play"></button></span>
+    			<span class="pausebtn"><button id="pause"></button></span>
+    			<!--button id="stop"></button-->
+    			<span class="nextbtn"><button id="next"></button></span>
+
+  		 </div>
+  		 <div class="clearfix"></div>
+  		 <div id="tracker">
+         <span id="duration-left">0:00</span>
+  			 <div id="progressBar">
+           <div class="sliderfill" id="sliderfill"></div>
+           <div class="sliderthumb" id="sliderthumb"></div>
+           <input class="slider" id="progress" type="range" value="0" step="1" oninput="showValue(this.value)"
+           onchange="showValue(this.value)"></input>
+
+         </div>
+         <span id="duration">0:00</span>
+  		 </div>
+  		 <div class="clearfix"></div>
+
+       <ul id="playlist" class="hidden">
+  			<!--li song="Paolo Nutini-New Shoes.mp3" cover="These_Streets.png" artist="Paolo Nutini"></li-->
+        <!--li song="Paolo Nutini-Loving You.mp3" cover="These_Streets.png" artist="Paolo Nutini">Loving You</li-->
+  		</ul>
+  	</div>
+
+    </div>
+
+  <script src="js/jquery.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
